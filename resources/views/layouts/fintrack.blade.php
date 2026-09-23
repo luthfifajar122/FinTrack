@@ -12,11 +12,11 @@
 <div class="min-h-screen flex flex-col md:flex-row" x-data="{ sidebarOpen: false }">
     <!-- Topbar mobile -->
     <div class="md:hidden sticky top-0 z-30 bg-gradient-to-r from-slate-800 to-slate-900 text-white px-4 py-3 flex items-center justify-between shadow-md">
-        <x-logo iconClass="w-8 h-8" textClass="text-lg text-white" subClass="hidden" />
         <button type="button" @click="sidebarOpen = !sidebarOpen" aria-label="Buka tutup menu" class="p-2 rounded-lg bg-white/10 hover:bg-white/20 transition duration-200">
             <svg x-show="!sidebarOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" /></svg>
             <svg x-show="sidebarOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" x-cloak><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
         </button>
+        <x-logo iconClass="w-8 h-8" textClass="text-lg text-white" subClass="hidden" />
     </div>
 
     <!-- Overlay: ketuk area luar untuk menutup -->
