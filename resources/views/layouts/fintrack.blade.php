@@ -19,19 +19,33 @@
         </button>
     </div>
 
-    <!-- Overlay mobile -->
-    <div x-show="sidebarOpen" @click="sidebarOpen = false" style="display: none;" class="fixed inset-0 z-30 bg-black/50 md:hidden" x-cloak x-transition.opacity duration-200></div>
+    <!-- Menu lipat mobile -->
+    <div x-show="sidebarOpen" x-cloak class="md:hidden bg-slate-800 text-white px-4 pb-4 pt-1">
+        <nav class="flex flex-col gap-2">
+            <a href="{{ route('dashboard') }}" class="px-4 py-2.5 rounded-xl text-sm font-medium transition duration-200 {{ request()->routeIs('dashboard') ? 'bg-blue-600' : 'bg-white/10' }}">Dashboard</a>
+            <a href="{{ route('transactions.index') }}" class="px-4 py-2.5 rounded-xl text-sm font-medium transition duration-200 {{ request()->routeIs('transactions.*') ? 'bg-blue-600' : 'bg-white/10' }}">Transaksi</a>
+            <a href="{{ route('categories.index') }}" class="px-4 py-2.5 rounded-xl text-sm font-medium transition duration-200 {{ request()->routeIs('categories.*') ? 'bg-blue-600' : 'bg-white/10' }}">Kategori</a>
+        </nav>
+        <div class="flex flex-col gap-2 mt-2 pt-3 border-t border-white/10">
+            <a href="{{ route('profile.edit') }}" class="px-4 py-2.5 rounded-xl text-sm font-medium transition duration-200 {{ request()->routeIs('profile.*') ? 'bg-blue-600' : 'bg-white/10' }}">Profil</a>
+            <form method="POST" action="{{ route('logout') }}">
+                @csrf
+                <button type="submit" class="w-full text-left px-4 py-2.5 rounded-xl text-sm font-medium bg-white/10">Keluar</button>
+            </form>
+        </div>
+    </div>
 
-    <aside class="bg-gradient-to-b from-slate-800 to-slate-900 text-white w-64 min-h-screen p-5 flex flex-col fixed inset-y-0 left-0 z-40 -translate-x-full md:translate-x-0 transform transition-transform duration-300 md:static md:z-auto md:sticky md:top-0" :class="{ 'translate-x-0': sidebarOpen, '-translate-x-full': !sidebarOpen }">
+    <!-- Sidebar desktop -->
+    <aside class="hidden md:flex bg-gradient-to-b from-slate-800 to-slate-900 text-white w-64 shrink-0 min-h-screen p-5 flex-col sticky top-0">
         <x-logo iconClass="w-11 h-11" textClass="text-2xl text-white" subClass="text-xs text-slate-400" class="mb-6" />
         <p class="text-xs text-slate-400 mb-4 px-1">Halo, {{ auth()->user()->name ?? 'Pengguna' }}</p>
         <nav class="flex flex-col gap-2">
-            <a href="{{ route('dashboard') }}" @click="sidebarOpen = false" class="px-4 py-2.5 rounded-xl text-sm font-medium transition duration-200 {{ request()->routeIs('dashboard') ? 'bg-blue-600 shadow-md shadow-blue-900/40' : 'bg-white/10 hover:bg-white/20' }}">Dashboard</a>
-            <a href="{{ route('transactions.index') }}" @click="sidebarOpen = false" class="px-4 py-2.5 rounded-xl text-sm font-medium transition duration-200 {{ request()->routeIs('transactions.*') ? 'bg-blue-600 shadow-md shadow-blue-900/40' : 'bg-white/10 hover:bg-white/20' }}">Transaksi</a>
-            <a href="{{ route('categories.index') }}" @click="sidebarOpen = false" class="px-4 py-2.5 rounded-xl text-sm font-medium transition duration-200 {{ request()->routeIs('categories.*') ? 'bg-blue-600 shadow-md shadow-blue-900/40' : 'bg-white/10 hover:bg-white/20' }}">Kategori</a>
+            <a href="{{ route('dashboard') }}" class="px-4 py-2.5 rounded-xl text-sm font-medium transition duration-200 {{ request()->routeIs('dashboard') ? 'bg-blue-600 shadow-md shadow-blue-900/40' : 'bg-white/10 hover:bg-white/20' }}">Dashboard</a>
+            <a href="{{ route('transactions.index') }}" class="px-4 py-2.5 rounded-xl text-sm font-medium transition duration-200 {{ request()->routeIs('transactions.*') ? 'bg-blue-600 shadow-md shadow-blue-900/40' : 'bg-white/10 hover:bg-white/20' }}">Transaksi</a>
+            <a href="{{ route('categories.index') }}" class="px-4 py-2.5 rounded-xl text-sm font-medium transition duration-200 {{ request()->routeIs('categories.*') ? 'bg-blue-600 shadow-md shadow-blue-900/40' : 'bg-white/10 hover:bg-white/20' }}">Kategori</a>
         </nav>
         <div class="flex flex-col gap-2 mt-auto pt-4 border-t border-white/10">
-            <a href="{{ route('profile.edit') }}" @click="sidebarOpen = false" class="px-4 py-2.5 rounded-xl text-sm font-medium transition duration-200 {{ request()->routeIs('profile.*') ? 'bg-blue-600 shadow-md shadow-blue-900/40' : 'bg-white/10 hover:bg-white/20' }}">Profil</a>
+            <a href="{{ route('profile.edit') }}" class="px-4 py-2.5 rounded-xl text-sm font-medium transition duration-200 {{ request()->routeIs('profile.*') ? 'bg-blue-600 shadow-md shadow-blue-900/40' : 'bg-white/10 hover:bg-white/20' }}">Profil</a>
             <form method="POST" action="{{ route('logout') }}">
                 @csrf
                 <button type="submit" class="w-full text-left px-4 py-2.5 rounded-xl text-sm font-medium bg-white/10 hover:bg-red-600 transition duration-200">Keluar</button>
