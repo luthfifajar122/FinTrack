@@ -22,7 +22,7 @@
                 </a>
             </div>
 
-            <div class="w-full sm:max-w-md mt-4 px-5 py-5 bg-white border-2 border-ink rounded-xl shadow-brutal-lg overflow-hidden">
+            <div class="w-full sm:max-w-sm mt-4 px-5 py-5 bg-white border-2 border-ink rounded-xl shadow-brutal-lg overflow-hidden">
                 {{ $slot }}
             </div>
             <p class="mt-3 text-[11px] font-bold uppercase tracking-widest text-ink/60">FinTrack • Keuangan Pribadi</p>

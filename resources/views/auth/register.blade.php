@@ -41,12 +41,12 @@
             <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
         </div>
 
-        <div class="flex items-center justify-between mt-4 gap-2">
-            <a class="font-bold text-sm underline decoration-ink decoration-2 underline-offset-2 hover:bg-mint px-1 rounded" href="{{ route('login') }}">
+        <div class="flex flex-wrap items-center justify-between mt-4 gap-2">
+            <a class="flex-1 min-w-[140px] font-bold text-[13px] leading-tight underline decoration-ink decoration-2 underline-offset-2 hover:bg-mint px-1 rounded" href="{{ route('login') }}">
                 Sudah punya akun? Masuk
             </a>
 
-            <x-primary-button class="!px-4 !py-2 !text-xs">
+            <x-primary-button class="!px-3 !py-1.5 !text-[11px] shrink-0">
                 Daftar
             </x-primary-button>
         </div>
