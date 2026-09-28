@@ -1,7 +1,7 @@
 <section>
     <header class="pb-3 border-b-2 border-ink">
         <h2 class="text-lg font-bold uppercase tracking-tight text-ink">
-            🔒 Ubah Kata Sandi
+            Ubah Kata Sandi
         </h2>
 
         <p class="mt-1 text-sm font-medium opacity-70">

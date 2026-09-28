@@ -57,7 +57,6 @@
         </tr>
     @empty
         <tr><td colspan="6" class="p-10 text-center">
-            <p class="text-4xl mb-2">🧾</p>
             <p class="font-bold uppercase">Tidak ada transaksi ditemukan.</p>
             <p class="text-sm font-medium opacity-60 mt-1">Coba ubah filter atau tambah data baru.</p>
         </td></tr>

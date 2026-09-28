@@ -1,5 +1,5 @@
 <x-guest-layout>
-    <h1 class="text-2xl font-bold uppercase tracking-tight mb-1">🛡️ Konfirmasi</h1>
+    <h1 class="text-2xl font-bold uppercase tracking-tight mb-1">Konfirmasi</h1>
     <div class="mb-4 text-sm font-medium bg-mint-pale border-2 border-ink rounded-lg px-3 py-2 shadow-brutal-sm">
         {{ __('This is a secure area of the application. Please confirm your password before continuing.') }}
     </div>

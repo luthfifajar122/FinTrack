@@ -35,7 +35,6 @@
         </tr>
     @empty
         <tr><td colspan="4" class="p-10 text-center">
-            <p class="text-4xl mb-2">🏷️</p>
             <p class="font-bold uppercase">Belum ada kategori.</p>
             <p class="text-sm font-medium opacity-60 mt-1">Tambahkan kategori untuk mulai mencatat.</p>
         </td></tr>

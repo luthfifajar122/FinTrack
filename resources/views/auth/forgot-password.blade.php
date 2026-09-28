@@ -1,5 +1,5 @@
 <x-guest-layout>
-    <h1 class="text-2xl font-bold uppercase tracking-tight mb-1">🔑 Lupa Password</h1>
+    <h1 class="text-2xl font-bold uppercase tracking-tight mb-1">Lupa Password</h1>
     <div class="mb-4 text-sm font-medium bg-mint-pale border-2 border-ink rounded-lg px-3 py-2 shadow-brutal-sm">
         {{ __('Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.') }}
     </div>

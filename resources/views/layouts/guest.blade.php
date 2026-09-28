@@ -16,16 +16,16 @@
     </head>
     <body class="font-sans text-ink antialiased">
         <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-cream px-4">
-            <div class="bg-mint border-2 border-ink rounded-xl shadow-brutal px-5 py-3 -rotate-1">
+            <div class="bg-mint border-2 border-ink rounded-lg shadow-brutal-sm px-3 py-2 -rotate-1">
                 <a href="/">
-                    <x-logo iconClass="w-12 h-12" textClass="text-2xl text-ink" subClass="text-[11px] text-ink" />
+                    <x-logo iconClass="w-9 h-9" textClass="text-xl text-ink" subClass="text-[10px] text-ink" />
                 </a>
             </div>
 
-            <div class="w-full sm:max-w-md mt-6 px-6 py-6 bg-white border-2 border-ink rounded-xl shadow-brutal-lg overflow-hidden">
+            <div class="w-full sm:max-w-sm mt-4 px-5 py-5 bg-white border-2 border-ink rounded-xl shadow-brutal-lg overflow-hidden">
                 {{ $slot }}
             </div>
-            <p class="mt-4 text-xs font-bold uppercase tracking-widest text-ink/60">★ FinTrack • Keuangan Pribadi ★</p>
+            <p class="mt-3 text-[11px] font-bold uppercase tracking-widest text-ink/60">FinTrack • Keuangan Pribadi</p>
         </div>
     </body>
 </html>

@@ -1,6 +1,6 @@
 <x-guest-layout>
-    <h1 class="text-2xl font-bold uppercase tracking-tight mb-1">✨ Daftar</h1>
-    <p class="text-xs font-bold uppercase tracking-widest opacity-60 mb-5">Buat akun FinTrack baru</p>
+    <h1 class="text-xl font-bold uppercase tracking-tight mb-0.5">Daftar</h1>
+    <p class="text-xs font-bold uppercase tracking-widest opacity-60 mb-4">Buat akun FinTrack baru</p>
     <form method="POST" action="{{ route('register') }}">
         @csrf
 
@@ -42,12 +42,12 @@
         </div>
 
         <div class="flex items-center justify-between mt-5 gap-2">
-            <a class="font-bold text-sm underline decoration-mint decoration-4 underline-offset-2 hover:bg-mint px-1 rounded" href="{{ route('login') }}">
+            <a class="font-bold text-sm underline decoration-ink decoration-2 underline-offset-2 hover:bg-mint px-1 rounded" href="{{ route('login') }}">
                 Sudah punya akun? Masuk
             </a>
 
-            <x-primary-button>
-                Daftar →
+            <x-primary-button class="!px-4 !py-2 !text-xs">
+                Daftar
             </x-primary-button>
         </div>
     </form>

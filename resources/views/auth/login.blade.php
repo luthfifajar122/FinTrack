@@ -1,6 +1,6 @@
 <x-guest-layout>
-    <h1 class="text-2xl font-bold uppercase tracking-tight mb-1">👋 Masuk</h1>
-    <p class="text-xs font-bold uppercase tracking-widest opacity-60 mb-5">Selamat datang kembali di FinTrack</p>
+    <h1 class="text-xl font-bold uppercase tracking-tight mb-0.5">Masuk</h1>
+    <p class="text-xs font-bold uppercase tracking-widest opacity-60 mb-4">Selamat datang kembali di FinTrack</p>
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
@@ -34,21 +34,21 @@
             </label>
         </div>
 
-        <div class="flex items-center justify-between mt-5 gap-2">
+        <div class="flex items-center justify-between mt-4 gap-2">
             @if (Route::has('password.request'))
-                <a class="font-bold text-sm underline decoration-mint decoration-4 underline-offset-2 hover:bg-mint px-1 rounded" href="{{ route('password.request') }}">
+                <a class="font-bold text-sm underline decoration-ink decoration-2 underline-offset-2 hover:bg-mint px-1 rounded" href="{{ route('password.request') }}">
                     Lupa kata sandi?
                 </a>
             @endif
 
-            <x-primary-button>
-                Masuk →
+            <x-primary-button class="!px-4 !py-2 !text-xs">
+                Masuk
             </x-primary-button>
         </div>
 
-        <p class="text-center text-sm font-medium mt-5 pt-4 border-t-2 border-ink/10">
+        <p class="text-center text-sm font-medium mt-4 pt-3 border-t-2 border-ink/10">
             Belum punya akun?
-            <a class="font-bold underline decoration-mint decoration-4 underline-offset-2 hover:bg-mint px-1 rounded" href="{{ route('register') }}">
+            <a class="font-bold underline decoration-ink decoration-2 underline-offset-2 hover:bg-mint px-1 rounded" href="{{ route('register') }}">
                 Daftar
             </a>
         </p>

@@ -1,7 +1,7 @@
 <section>
     <header class="pb-3 border-b-2 border-ink">
         <h2 class="text-lg font-bold uppercase tracking-tight text-ink">
-            📝 Informasi Profil
+            Informasi Profil
         </h2>
 
         <p class="mt-1 text-sm font-medium opacity-70">
@@ -33,7 +33,7 @@
                     <p class="text-sm mt-2 font-medium">
                         Alamat email Anda belum terverifikasi.
 
-                        <button form="send-verification" class="font-bold underline decoration-mint decoration-4 underline-offset-2 hover:bg-mint px-1 rounded">
+                        <button form="send-verification" class="font-bold hover:bg-mint px-1 rounded">
                             Klik di sini untuk mengirim ulang email verifikasi.
                         </button>
                     </p>
