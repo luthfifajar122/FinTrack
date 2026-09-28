@@ -1,9 +1,15 @@
 @extends('layouts.fintrack')
 @section('title', 'Dashboard')
 @section('content')
-<div class="mb-6">
-    <h1 class="page-title-brutal">Dashboard</h1>
-    <p class="mt-2 text-sm font-bold uppercase tracking-widest text-ink/60">Ringkasan keuangan pribadi Anda</p>
+<div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3 mb-6">
+    <div>
+        <h1 class="page-title-brutal">Dashboard</h1>
+        <p class="mt-2 text-sm font-bold uppercase tracking-widest text-ink/60">Ringkasan keuangan pribadi Anda</p>
+    </div>
+    <a href="{{ route('transactions.create') }}" class="btn-brutal-mint shrink-0">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" /></svg>
+        Tambah Transaksi
+    </a>
 </div>
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
     <div class="card-brutal p-5 bg-[#FDE047] hover:-translate-y-1 hover:shadow-brutal-lg transition-all">
@@ -24,9 +30,12 @@
     </div>
 </div>
 <div class="card-brutal p-5 md:p-6">
-    <div class="flex items-center justify-between mb-4 pb-3 border-b-2 border-ink">
+    <div class="flex flex-wrap items-center justify-between gap-2 mb-4 pb-3 border-b-2 border-ink">
         <h2 class="font-bold text-lg uppercase tracking-tight">5 Transaksi Terbaru</h2>
-        <a href="{{ route('transactions.index') }}" class="text-sm font-bold uppercase hover:bg-mint px-2 py-1 border-2 border-transparent hover:border-ink hover:shadow-brutal-sm rounded-md transition-all">Lihat semua</a>
+        <div class="flex items-center gap-2">
+            <a href="{{ route('transactions.index') }}" class="text-sm font-bold uppercase hover:bg-mint px-2 py-1 border-2 border-transparent hover:border-ink hover:shadow-brutal-sm rounded-md transition-all">Lihat semua</a>
+            <a href="{{ route('transactions.create') }}" class="btn-brutal-mint !px-3 !py-1.5 !text-xs">+ Tambah</a>
+        </div>
     </div>
     <div class="overflow-x-auto -mx-5 md:mx-0 px-5 md:px-0">
     <table class="w-full text-sm table-brutal">
