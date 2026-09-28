@@ -46,7 +46,7 @@
             </x-primary-button>
         </div>
 
-        <p class="text-center text-sm font-medium mt-4 pt-3 border-t-2 border-ink/10">
+        <p class="text-center text-sm font-medium mt-2 pt-3 border-t-2 border-ink/10">
             Belum punya akun?
             <a class="font-bold underline decoration-ink decoration-2 underline-offset-2 hover:bg-mint px-1 rounded" href="{{ route('register') }}">
                 Daftar

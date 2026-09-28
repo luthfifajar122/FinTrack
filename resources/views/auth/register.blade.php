@@ -41,7 +41,7 @@
             <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
         </div>
 
-        <div class="flex items-center justify-between mt-5 gap-2">
+        <div class="flex items-center justify-between mt-4 gap-2">
             <a class="font-bold text-sm underline decoration-ink decoration-2 underline-offset-2 hover:bg-mint px-1 rounded" href="{{ route('login') }}">
                 Sudah punya akun? Masuk
             </a>
