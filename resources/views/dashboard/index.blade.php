@@ -3,30 +3,30 @@
 @section('content')
 <div class="mb-6">
     <h1 class="page-title-brutal">Dashboard</h1>
-    <p class="mt-2 text-sm font-bold uppercase tracking-widest text-ink/60">★ Ringkasan keuangan pribadi Anda ★</p>
+    <p class="mt-2 text-sm font-bold uppercase tracking-widest text-ink/60">Ringkasan keuangan pribadi Anda</p>
 </div>
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
     <div class="card-brutal p-5 bg-[#FDE047] hover:-translate-y-1 hover:shadow-brutal-lg transition-all">
-        <p class="text-xs font-bold uppercase tracking-widest mb-1">💰 Total Saldo</p>
+        <p class="text-xs font-bold uppercase tracking-widest mb-1">Total Saldo</p>
         <p class="text-xl font-bold">{{ format_rupiah($saldo) }}</p>
     </div>
     <div class="card-brutal p-5 bg-mint hover:-translate-y-1 hover:shadow-brutal-lg transition-all">
-        <p class="text-xs font-bold uppercase tracking-widest mb-1">📈 Total Pemasukan</p>
+        <p class="text-xs font-bold uppercase tracking-widest mb-1">Total Pemasukan</p>
         <p class="text-xl font-bold">{{ format_rupiah($totalPemasukan) }}</p>
     </div>
     <div class="card-brutal p-5 bg-[#FECACA] hover:-translate-y-1 hover:shadow-brutal-lg transition-all">
-        <p class="text-xs font-bold uppercase tracking-widest mb-1">📉 Total Pengeluaran</p>
+        <p class="text-xs font-bold uppercase tracking-widest mb-1">Total Pengeluaran</p>
         <p class="text-xl font-bold">{{ format_rupiah($totalPengeluaran) }}</p>
     </div>
     <div class="card-brutal p-5 bg-[#DDD6FE] hover:-translate-y-1 hover:shadow-brutal-lg transition-all">
-        <p class="text-xs font-bold uppercase tracking-widest mb-1">🧾 Jumlah Transaksi</p>
+        <p class="text-xs font-bold uppercase tracking-widest mb-1">Jumlah Transaksi</p>
         <p class="text-xl font-bold">{{ $jumlahTransaksi }}</p>
     </div>
 </div>
 <div class="card-brutal p-5 md:p-6">
     <div class="flex items-center justify-between mb-4 pb-3 border-b-2 border-ink">
         <h2 class="font-bold text-lg uppercase tracking-tight">5 Transaksi Terbaru</h2>
-        <a href="{{ route('transactions.index') }}" class="text-sm font-bold uppercase underline decoration-mint decoration-4 underline-offset-2 hover:bg-mint px-2 py-1 border-2 border-transparent hover:border-ink hover:shadow-brutal-sm rounded-md transition-all">Lihat semua →</a>
+        <a href="{{ route('transactions.index') }}" class="text-sm font-bold uppercase hover:bg-mint px-2 py-1 border-2 border-transparent hover:border-ink hover:shadow-brutal-sm rounded-md transition-all">Lihat semua</a>
     </div>
     <div class="overflow-x-auto -mx-5 md:mx-0 px-5 md:px-0">
     <table class="w-full text-sm table-brutal">
@@ -42,7 +42,6 @@
             </tr>
         @empty
             <tr><td colspan="5" class="py-10 text-center">
-                <p class="text-4xl mb-2">📭</p>
                 <p class="font-bold uppercase">Belum ada transaksi.</p>
                 <a href="{{ route('transactions.create') }}" class="btn-brutal-mint mt-3 text-xs">+ Tambah transaksi pertama</a>
             </td></tr>

@@ -7,7 +7,6 @@
         <span class="block text-xs font-medium truncate opacity-70">{{ auth()->user()->email ?? '' }}</span>
     </span>
 </div>
-<p class="px-2 mb-1.5 text-[11px] font-bold tracking-widest text-ink/70">★ MENU UTAMA</p>
 <nav class="flex flex-col gap-2">
     <a href="{{ route('dashboard') }}" @click="sidebarOpen = false" class="sidebar-link {{ request()->routeIs('dashboard') ? 'bg-ink text-white shadow-brutal' : 'bg-white text-ink border-ink shadow-brutal-sm hover:-translate-y-0.5 hover:shadow-brutal' }}">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zm10 0a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zm10 0a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" /></svg>
@@ -22,7 +21,6 @@
         Kategori
     </a>
 </nav>
-<p class="px-2 mt-4 mb-1.5 text-[11px] font-bold tracking-widest text-ink/70">● AKUN</p>
 <div class="flex flex-col gap-2 mt-auto pt-3 border-t-2 border-ink/20">
     <a href="{{ route('profile.edit') }}" @click="sidebarOpen = false" class="sidebar-link {{ request()->routeIs('profile.*') ? 'bg-ink text-white shadow-brutal' : 'bg-white text-ink border-ink shadow-brutal-sm hover:-translate-y-0.5 hover:shadow-brutal' }}">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
